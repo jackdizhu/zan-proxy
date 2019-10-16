@@ -3,9 +3,11 @@
   "version": "4.0.24",
   "description": "前端代理",
   "scripts": {
-    "build": "tsc && cd ./webui && npm run build && cd ../",
-    "test": "HOME=/tmp/proxy-test nyc mocha -r ts-node/register -c --recursive 'test/**/**/*.spec.ts'",
     "watch": "tsc --watch",
+    "devServe": "node ./dist/bin/index.js",
+    "devWeb": "cd ./webui && npm i && npm run dev",
+    "build": "tsc && cd ./webui && npm i && npm run build && cd ../",
+    "test": "HOME=/tmp/proxy-test nyc mocha -r ts-node/register -c --recursive 'test/**/**/*.spec.ts'",
     "postinstall": "node ./scripts/resetDataFile.js",
     "lint": "tslint 'src/**/**/*.ts' --force",
     "pretty": "prettier 'src/**/**/*.ts' --write"

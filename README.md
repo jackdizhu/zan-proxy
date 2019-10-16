@@ -1,3 +1,16 @@
+### 开发流程
+
+```sh
+npm run watch # 编译ts 生成 js 文件
+# "watch": "tsc --watch"
+npm run devServe # 启动后端服务
+# "devServe": "node ./dist/bin/index.js"
+npm run devWeb # 启动前端服务
+# "devWeb": "cd ./webui && npm i && npm run dev"
+npm run build # 打包
+# "build": "tsc && cd ./webui && npm i && npm run build && cd ../"
+```
+
 <p  align="left">
     <a href="https://github.com/youzan/"><img alt="logo" width="36" height="36" src="https://img.yzcdn.cn/public_files/2017/02/09/e84aa8cbbf7852688c86218c1f3bbf17.png" alt="youzan">
     </a>
