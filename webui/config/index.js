@@ -4,11 +4,11 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
-    manager: path.resolve(__dirname, '../dist/manager.html'),
+    manager: path.resolve(__dirname, '../dist/index.html'),
     monitor: path.resolve(__dirname, '../dist/monitor.html'),
     wsmock: path.resolve(__dirname, '../dist/wsmock.html'),
-  // js css生成到proxy所在工程
-  //  assetsRoot: path.resolve(__dirname, '../dist'),
+    // js css生成到proxy所在工程
+    //  assetsRoot: path.resolve(__dirname, '../dist'),
     assetsRoot: path.resolve(__dirname, '../../site'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',

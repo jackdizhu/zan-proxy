@@ -9,6 +9,10 @@ npm run devWeb # 启动前端服务
 # "devWeb": "cd ./webui && npm i && npm run dev"
 npm run build # 打包
 # "build": "tsc && cd ./webui && npm i && npm run build && cd ../"
+
+# http://localhost:8080/index.html // 管理页面 manager
+# http://localhost:8080/monitor.html // 请求监听页面
+# http://localhost:8080/wsmock.html // WebSocket Mock
 ```
 
 <p  align="left">
