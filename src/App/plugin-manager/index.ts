@@ -38,7 +38,7 @@ export default class PluginManager {
         } catch (error) {
           console.error(
             `plugin "${curr.name}" has a runtime error. please check it.\n${
-              error.stack
+            error.stack
             }`,
           );
           process.exit(-1);
@@ -204,6 +204,10 @@ export default class PluginManager {
       const plugin = this.plugins[name];
       server.use(plugin.proxy(server));
     });
+    // 增加插件
+    const pluginClass = require('../plugin/webDebug');
+    const plugin = new pluginClass();
+    server.use(plugin.proxy(server));
   }
 
   private getDir() {
